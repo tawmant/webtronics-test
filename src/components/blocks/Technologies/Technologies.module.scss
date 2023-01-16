@@ -1,0 +1,31 @@
+@import '/src/styles/index.scss';
+
+.technologies {
+  margin-top: vw(179);
+  text-align: center;
+}
+
+.container {
+  max-width: vw(800);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-text {
+  max-width: vw(530);
+  width: 100%;
+  margin: 0 auto;
+  p {
+    margin-top: vw(16);
+  }
+}
+
+.description {
+}
+
+.cards {
+  margin-top: vw(54);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: vw(25);
+}

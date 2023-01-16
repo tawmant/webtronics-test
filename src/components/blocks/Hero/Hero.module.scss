@@ -1,0 +1,67 @@
+@import '/src/styles/index.scss';
+
+.bg {
+  background: no-repeat url('../../../../public/images/png/hero-bg.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: normal;
+  z-index: -2;
+}
+
+.hero {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, auto);
+  grid-template-areas:
+    'title-first title-first title-first description'
+    'btn-wrapper title-second title-second title-second'
+    '. . . subtitle';
+  align-items: center;
+  padding-top: vw(100);
+}
+
+.title-first {
+  @include font('Clash Display', vw(150), 600, 120%, $white);
+  grid-area: title-first;
+}
+.description {
+  grid-area: description;
+  margin-left: vw(57);
+}
+.btn-wrapper {
+  grid-area: btn-wrapper;
+  margin-right: vw(24);
+}
+.title-second {
+  @include font('Clash Display', vw(150), 600, 120%, $white);
+  grid-area: title-second;
+}
+.subtitle {
+  grid-area: subtitle;
+  @include font('Clash Display', vw(32), 600, 120%, $white);
+  padding-left: vw(75);
+  display: flex;
+  justify-content: center;
+  grid-template: none;
+  height: 100%;
+  align-items: self-start;
+}
+//grid-template: auto auto / auto min-content;
+//grid-template-areas: "title network" "position position";
+//${UserInfoBodyInfoName} {
+//  grid-area: title;
+//}
+//${UserInfoBodyInfoSocialNetworks} {
+//  grid-area: network;
+//}
+//${UserInfoBodyInfoPosition} {
+//  grid-area: position;
+//}
+//${theme.mqMax("md")} {
+//  grid-template: auto auto / auto min-content;
+//  grid-template-areas: "title title" "position network";
+//  align-items: center;
+//}

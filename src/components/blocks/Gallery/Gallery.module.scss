@@ -1,0 +1,40 @@
+@import '/src/styles/index.scss';
+
+.gallery {
+  margin-top: vw(180);
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(3, 4fr) / repeat(4, 4fr);
+  grid-template-areas:
+    'firstDescription img2 img2 img3'
+    'img1 img2 img2 img4'
+    'img1 secondDescription secondDescription secondDescription';
+  grid-gap: vw(19) vw(16);
+  img {
+    border-radius: vw(16);
+  }
+}
+
+.first-description {
+  grid-area: firstDescription;
+  align-self: center;
+}
+.img1 {
+  grid-area: img1;
+}
+.img2 {
+  grid-area: img2;
+}
+.img3 {
+  grid-area: img3;
+}
+.img4 {
+  grid-area: img4;
+}
+.second-description {
+  grid-area: secondDescription;
+  align-self: self-end;
+  margin-bottom: vw(17);
+}

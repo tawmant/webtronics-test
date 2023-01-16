@@ -1,0 +1,22 @@
+@import '/src/styles/index.scss';
+
+.btn {
+  padding: vw(24) vw(32);
+  @include font('Inter', vw(20), 500, vw(24), $dark-blue);
+  text-align: center;
+  width: 100%;
+  height: vw(72);
+  background: linear-gradient(180deg, #1ff2ff 0%, #27f9e5 52.66%, #2fffcd 100%);
+  border-radius: vw(8);
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: #3b48d0;
+  }
+  &:active {
+    color: $white;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+}

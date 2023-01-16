@@ -1,0 +1,39 @@
+@import '/src/styles/index.scss';
+
+.contact-us {
+  padding-top: vw(181);
+}
+
+.wrapper {
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  border-radius: vw(20);
+  width: 100%;
+  padding: vw(1);
+}
+
+.form {
+  background: $opacity-white;
+  backdrop-filter: blur(vw(5));
+  border-radius: vw(20);
+  padding: vw(56);
+}
+
+.container {
+  max-width: vw(493);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  button {
+    margin-top: vw(24);
+  }
+}
+
+.description {
+  margin: vw(16) 0 vw(24);
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: vw(16);
+}

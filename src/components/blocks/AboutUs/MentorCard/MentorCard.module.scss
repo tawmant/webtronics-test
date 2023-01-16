@@ -1,0 +1,35 @@
+@import '/src/styles/index.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: vw(188);
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.image-wrapper {
+  margin-bottom: vw(16);
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    height: vw(188);
+    min-width: vw(188);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 1px;
+  }
+}
+
+.title {
+  margin-bottom: vw(4);
+  @include font('Clash Display', vw(24), 500, 120%, $white);
+}
+
+.description {
+  @include font('Inter', vw(14), 400, 140%, $white);
+}
