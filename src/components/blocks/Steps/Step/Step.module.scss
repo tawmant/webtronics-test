@@ -1,0 +1,63 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
+  padding: vw(1);
+  border-radius: vw(8);
+  width: fit-content;
+  position: relative;
+  .step-border {
+    position: absolute;
+    width: vw(146);
+    height: vw(228);
+    right: vw(-18);
+    top: vw(-18);
+  }
+  .step-arrow {
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    right: vw(-135);
+    width: vw(104);
+    height: vw(24);
+    transform: translateY(-50%);
+  }
+  &.even {
+    .step-border {
+      right: auto;
+      left: vw(-18);
+      transform: rotate(180deg);
+    }
+    .step-arrow {
+      width: vw(94);
+      right: auto;
+      left: vw(-122);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.container {
+  width: vw(475);
+  height: vw(191);
+  padding: vw(24);
+  background: $opacity-white;
+  border-radius: vw(8);
+}
+
+.step-number {
+  @include font('Clash Display', vw(24), 500, 120%, $white);
+}
+
+.step-title {
+  @include font('Clash Display', vw(32), 600, 120%, $white);
+  margin: vw(16) 0;
+}
+
+.description {
+  color: $light-blue;
+}

@@ -1,2 +1,37 @@
 @import '/src/styles/index.scss';
 
+.steps {
+  padding-top: vw(184);
+}
+
+.container {
+  margin-top: vw(158);
+  display: flex;
+  justify-content: space-between;
+  ul {
+    row-gap: vw(187);
+  }
+}
+
+.odd-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: vw(-85);
+}
+
+.even-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-wrapper {
+  min-width: vw(222);
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  background: #2fffcd;
+  width: vw(4);
+  height: vw(877);
+}
