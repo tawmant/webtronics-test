@@ -10,12 +10,12 @@ interface ILayoutProps {
 const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
     <div className={st.layout}>
-      <img src="/images/svg/background.svg" alt="bg" className={st.layoutBg} />
+      <div className={st.layoutBg} />
       <div className={st.container}>
         <Header />
         <main className={st.main}>{children}</main>
-        {/*<Footer />*/}
       </div>
+      <Footer />
     </div>
   )
 }

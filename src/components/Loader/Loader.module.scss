@@ -1,0 +1,32 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $opacity-white;
+  opacity: 0.9;
+}
+
+.loader {
+  border: vw(8) solid #f3f3f3;
+  border-top: vw(8) solid $dark-blue;
+  border-radius: 50%;
+  width: vw(120);
+  height: vw(120);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

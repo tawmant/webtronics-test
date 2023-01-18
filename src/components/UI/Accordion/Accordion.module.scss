@@ -1,1 +1,96 @@
 @import '/src/styles/index.scss';
+
+.wrapper {
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
+  width: 100%;
+  padding: vw(1);
+  border-radius: vw(8);
+  cursor: pointer;
+  clip-path: polygon(
+    63% 0,
+    100% 0,
+    100% 43%,
+    100% 61%,
+    95% 100%,
+    38% 100%,
+    0 100%,
+    0 38%,
+    5% 0
+  );
+  &.active {
+    clip-path: polygon(
+      63% 0,
+      100% 0,
+      100% 43%,
+      100% 81%,
+      96% 100%,
+      38% 100%,
+      0 100%,
+      0 22%,
+      4% 0
+    );
+  }
+}
+
+.container {
+  overflow: hidden;
+  padding: vw(16) vw(24);
+  max-height: vw(62);
+  height: 100%;
+  border-radius: vw(8);
+  background: $opacity-white;
+  p {
+    margin-top: vw(30);
+  }
+  transition: 0.2s;
+  clip-path: polygon(
+    63% 0,
+    100% 0,
+    100% 43%,
+    100% 61%,
+    95% 100%,
+    38% 100%,
+    0 100%,
+    0 38%,
+    5% 0
+  );
+  &.active {
+    p {
+      margin-top: vw(16);
+    }
+    padding: vw(27) vw(24);
+    max-height: 100%;
+    clip-path: polygon(
+      63% 0,
+      100% 0,
+      100% 43%,
+      100% 81%,
+      96% 100%,
+      38% 100%,
+      0 100%,
+      0 22%,
+      4% 0
+    );
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+}
+
+.icon {
+  margin-top: vw(4);
+}
+
+.title-accordion {
+  @include font('Clash Display', vw(24), 500, 120%, $white);
+}

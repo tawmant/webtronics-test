@@ -1,9 +1,12 @@
 @import '/src/styles/index.scss';
 
 .wrapper {
-  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
   width: 100%;
-  height: vw(70);
   padding: vw(1);
   border-radius: vw(8);
 }
@@ -12,7 +15,7 @@
   border-radius: vw(8);
   padding: vw(24);
   width: 100%;
-  max-height: 100%;
+  height: vw(70);
   background: $opacity-white;
   @include font('Inter', vw(16), 400, 140%, $light-blue);
   &:active {

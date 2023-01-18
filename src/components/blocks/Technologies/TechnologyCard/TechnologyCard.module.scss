@@ -6,16 +6,17 @@
 
   border-radius: vw(16);
   padding: vw(1);
-  transform: rotateX(180deg);
+  clip-path: polygon(50% 0%, 100% 0, 100% 83%, 74% 99%, 0 100%, 0% 60%, 0 0);
+
 }
 
 .technology {
-  transform: rotateX(180deg);
   width: vw(182);
   background: $opacity-white;
   backdrop-filter: blur(5px);
   border-radius: vw(16);
   padding: vw(24) vw(9);
+  clip-path: polygon(50% 0%, 100% 0, 100% 83%, 74% 99%, 0 100%, 0% 60%, 0 0);
 }
 
 .image-wrapper {

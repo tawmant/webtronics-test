@@ -27,7 +27,7 @@ const AboutUs = () => {
     },
   ])
   return (
-    <section className={st.aboutUs}>
+    <section id='about-us' className={st.aboutUs}>
       <h2 className="title">About Us</h2>
       <div className={st.container}>
         <div className={cl(['col-6', st.left])}>

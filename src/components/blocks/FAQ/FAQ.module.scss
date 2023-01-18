@@ -1,0 +1,34 @@
+@import '/src/styles/index.scss';
+
+.faq {
+  padding-top: vw(180);
+}
+
+.container {
+  margin-top: vw(56);
+  display: flex;
+  column-gap: vw(100);
+}
+
+.left {
+  p {
+    margin: 0 vw(76) vw(56) 0;
+  }
+  img {
+    width: vw(344);
+    height: vw(405);
+    object-fit: cover;
+    margin-left: vw(60);
+  }
+}
+
+.right {
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(24);
+  li {
+    width: 100%;
+  }
+}

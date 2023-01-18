@@ -1,1 +1,54 @@
 @import '/src/styles/index.scss';
+
+.footer {
+  margin-top: vw(148);
+  background: $opacity-white;
+  padding: vw(33);
+  border-top: 1px solid #15bffdb2;
+}
+.container {
+  max-width: vw(1200);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  a {
+    display: block;
+    margin-bottom: vw(16);
+  }
+}
+
+.left {
+  max-width: vw(235);
+  width: 100%;
+}
+
+.left-description {
+  margin-top: vw(22);
+  @include font('Inter', vw(16), 400, vw(19), $white);
+}
+
+.center {
+  max-width: vw(255);
+  width: 100%;
+  &-left {
+  }
+  &-right {
+  }
+}
+
+.footer-title {
+  @include font('Roboto', vw(18), 700, vw(21), $white);
+  margin-bottom: vw(24);
+}
+
+.right {
+  max-width: vw(155);
+  width: 100%;
+  div {
+    column-gap: vw(24);
+  }
+}

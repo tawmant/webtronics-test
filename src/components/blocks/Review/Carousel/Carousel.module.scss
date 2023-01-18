@@ -1,0 +1,55 @@
+@import '/src/styles/index.scss';
+
+.carousel {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: vw(16);
+}
+
+.count {
+  display: flex;
+  .current {
+    @include font('Clash Display', vw(24), 500, 120%, $white);
+  }
+  .total {
+    margin-left: vw(7);
+    @include font('Inter', vw(16), 400, 140%, $white);
+  }
+}
+
+.arrows-wrapper {
+  display: flex;
+  column-gap: vw(24);
+}
+
+.btn-wrapper {
+  padding: vw(1);
+  border-radius: vw(8);
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+}
+
+.btn {
+  border-radius: vw(8);
+  background: $opacity-white;
+  width: vw(40);
+  height: vw(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  column-gap: vw(24);
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -11,7 +11,7 @@ const Technologies = () => {
     { title: 'JavaScript', image: '/images/png/technologies/js.png' },
   ])
   return (
-    <section className={st.technologies}>
+    <section id="technologies" className={st.technologies}>
       <div className={st.container}>
         <div className={st.containerText}>
           <h2 className="title">Programming technologies</h2>

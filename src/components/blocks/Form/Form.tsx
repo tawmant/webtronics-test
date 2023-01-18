@@ -22,7 +22,10 @@ const schema = yup
   .object({
     name: yup.string().required(),
     email: yup.string().email().required(),
-    phone: yup.string().matches(phoneRegExp, 'Phone number is not valid').required(),
+    phone: yup
+      .string()
+      .matches(phoneRegExp, 'Phone number is not valid')
+      .required(),
   })
   .required()
 
@@ -50,7 +53,9 @@ const Form = () => {
         <form className={st.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={st.container}>
             <h2 className="title">Contact us</h2>
-            <p className={cl(st.description, 'text')}>Do you have any kind of help please contact with us.</p>
+            <p className={cl(st.description, 'text')}>
+              Do you have any kind of help please contact with us.
+            </p>
             <div className={st.inputsWrapper}>
               {inputsRef.current.map((inputItem) => (
                 <Controller
@@ -58,7 +63,11 @@ const Form = () => {
                   control={control}
                   name={inputItem.name}
                   render={({ field, formState: { errors } }) => (
-                    <Input {...field} placeholder={inputItem.placeholder} error={!!errors[inputItem.name]} />
+                    <Input
+                      {...field}
+                      placeholder={inputItem.placeholder}
+                      error={!!errors[inputItem.name]}
+                    />
                   )}
                 />
               ))}
