@@ -11,7 +11,6 @@ interface IStepProps {
 const Step: FC<IStepProps> = ({ step, isOddOrEven }) => {
   const isOdd = isOddOrEven === 'odd'
 
-  console.log(isOdd)
   return (
     <li className={cl(st.wrapper, { [st.even]: !isOdd })}>
       <img

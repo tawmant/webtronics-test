@@ -10,6 +10,9 @@
 .menu-list {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .menu-item {
   padding: 0 vw(24);

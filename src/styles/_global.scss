@@ -26,9 +26,15 @@ button {
 .title {
   @include font('Clash Display', vw(72), 600, 120%, $white);
   text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: vmin(20);
+  }
 }
 .text {
   @include font('Inter', vw(16), 400, 140%, $white);
+  @media screen and (max-width: 768px) {
+    font-size: vmin(6);
+  }
 }
 
 .col-1 {

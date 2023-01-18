@@ -1,0 +1,89 @@
+@import '/src/styles/index.scss';
+
+.menu {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  position: fixed;
+  z-index: 101;
+  top: vmin(17);
+  right: vmin(17);
+  background: #2fffcd;
+  width: vmin(17);
+  height: vmin(17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: vmin(4);
+  span {
+    display: block;
+    width: vmin(10);
+    height: vmin(2);
+    background: $background;
+    transition: 0.2s;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: vmin(10);
+      height: vmin(2);
+      background: $background;
+      left: vmin(4);
+      transition: 0.2s;
+    }
+    &::before {
+      top: vmin(4);
+    }
+    &::after {
+      width: vmin(8);
+      bottom: vmin(4);
+    }
+  }
+  &.open span {
+    width: 0;
+    &::before {
+      width: vmin(12);
+      transform: rotate(49deg);
+      top: vmin(7);
+      left: vmin(3);
+    }
+    &::after {
+      width: vmin(12);
+      transform: rotate(-49deg);
+      bottom: vmin(7);
+      left: vmin(3);
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $background;
+  transform: translateX(-100%);
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li {
+    a {
+      @include font('Clash Display', vmin(25), 600, 120%, $white);
+    }
+    margin-bottom: vmin(25);
+  }
+}

@@ -2,7 +2,7 @@
 
 .bg {
   background: no-repeat url('../../../../public/images/png/hero-bg.png');
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -21,6 +21,18 @@
     '. . . subtitle';
   align-items: center;
   padding-top: vw(100);
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    grid-template: repeat(5, max-content) / max-content;
+    grid-row-gap: vmin(5);
+    grid-template-areas:
+      'title-first'
+      'title-second'
+      'subtitle'
+      'description'
+      'btn-wrapper';
+  }
+  justify-content: center;
 }
 
 .title-first {
@@ -30,10 +42,18 @@
 .description {
   grid-area: description;
   margin-left: vw(57);
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
 }
 .btn-wrapper {
   grid-area: btn-wrapper;
   margin-right: vw(24);
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    max-width: vw(300);
+  }
+  justify-self: center;
 }
 .title-second {
   @include font('Clash Display', vw(150), 600, 120%, $white);
@@ -49,19 +69,3 @@
   height: 100%;
   align-items: self-start;
 }
-//grid-template: auto auto / auto min-content;
-//grid-template-areas: "title network" "position position";
-//${UserInfoBodyInfoName} {
-//  grid-area: title;
-//}
-//${UserInfoBodyInfoSocialNetworks} {
-//  grid-area: network;
-//}
-//${UserInfoBodyInfoPosition} {
-//  grid-area: position;
-//}
-//${theme.mqMax("md")} {
-//  grid-template: auto auto / auto min-content;
-//  grid-template-areas: "title title" "position network";
-//  align-items: center;
-//}

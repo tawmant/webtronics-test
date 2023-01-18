@@ -10,7 +10,10 @@ const Input: FC<IInputProps> = (props) => {
   const isError = props.error
   return (
     <div className={cl([st.wrapper, isError ? st.errorWrapper : ''])}>
-      <input className={cl([st.input, isError ? st.errorInput : ''])} {...props} />
+      <input
+        className={cl([st.input, isError ? st.errorInput : ''])}
+        {...props}
+      />
     </div>
   )
 }

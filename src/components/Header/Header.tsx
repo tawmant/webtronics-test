@@ -2,8 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import st from './Header.module.scss'
 import { useRef } from 'react'
+import BurgerMenu from '../BurgerMenu/BurgerMenu'
 
-interface INavbar {
+export interface INavbar {
   href: string
   text: string
 }
@@ -36,7 +37,8 @@ const Header = () => {
     <header className={st.header}>
       <Link href="/" passHref>
         <Image src="/images/svg/logo.svg" alt="logo" width={169} height={33} />
-      </Link>{' '}
+      </Link>
+      <BurgerMenu navbarList={navbarRef.current} />
       <nav>
         <ul className={st.menuList}>
           {navbarRef.current.map((navbarItem) => (

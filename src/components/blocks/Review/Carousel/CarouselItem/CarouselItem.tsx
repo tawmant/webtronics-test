@@ -1,7 +1,7 @@
+import { FC } from 'react'
+import { INewCarouselItem } from '../types'
 import st from './CarouselItem.module.scss'
 import cl from 'classnames'
-import { ICarouselItem, INewCarouselItem } from '../types'
-import { FC } from 'react'
 
 interface ICarouselItemProps {
   data: INewCarouselItem
@@ -9,7 +9,11 @@ interface ICarouselItemProps {
   onChangeActive: (numberItem: number) => void
 }
 
-const CarouselItem: FC<ICarouselItemProps> = ({ data, active, onChangeActive }) => {
+const CarouselItem: FC<ICarouselItemProps> = ({
+  data,
+  active,
+  onChangeActive,
+}) => {
   return (
     <li className={st.wrapper} onClick={() => onChangeActive(data.numberItem)}>
       <div className={cl([st.item, active ? st.active : ''])}>

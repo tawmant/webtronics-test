@@ -2,6 +2,10 @@
 
 .steps {
   padding-top: vw(184);
+  @media screen and (max-width: 768px) {
+    max-width: vw(1200);
+    margin: 0 auto;
+  }
 }
 
 .container {

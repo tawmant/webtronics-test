@@ -9,10 +9,15 @@
   display: flex;
   align-items: center;
   column-gap: vw(24);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .left {
-
+  @media screen and (max-width: 768px) {
+    margin-bottom: vmin(4);
+  }
 }
 
 .left-title {
@@ -21,5 +26,4 @@
 }
 
 .right {
-
 }

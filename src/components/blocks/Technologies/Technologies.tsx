@@ -16,7 +16,8 @@ const Technologies = () => {
         <div className={st.containerText}>
           <h2 className="title">Programming technologies</h2>
           <p className="text">
-            By the end, you’ll have the portfolio and interview skills you need to start your new career.
+            By the end, you’ll have the portfolio and interview skills you need
+            to start your new career.
           </p>
         </div>
         <div className={st.cards}>

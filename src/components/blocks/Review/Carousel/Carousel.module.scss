@@ -28,7 +28,11 @@
 .btn-wrapper {
   padding: vw(1);
   border-radius: vw(8);
-  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
 }
 
 .btn {
@@ -39,6 +43,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: vw(60);
+    height: vw(60);
+  }
+  @media screen and (max-width: 576px) {
+    width: vw(80);
+    height: vw(80);
+  }
+}
+
+.arrow-right {
+  transform: rotate(180deg);
 }
 
 .list {

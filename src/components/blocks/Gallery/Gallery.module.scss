@@ -6,7 +6,7 @@
 
 .container {
   display: grid;
-  grid-template: repeat(3, 4fr) / repeat(4, 4fr);
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
   grid-template-areas:
     'firstDescription img2 img2 img3'
     'img1 img2 img2 img4'
@@ -15,6 +15,18 @@
   img {
     border-radius: vw(16);
   }
+  @media screen and (max-width: 768px) {
+    grid-template: repeat(6, auto) / vw(1200);
+    grid-row-gap: vmin(4);
+    grid-template-areas:
+      'firstDescription'
+      'img1'
+      'secondDescription'
+      'img2'
+      'img3'
+      'img4';
+  }
+  justify-content: center;
 }
 
 .first-description {

@@ -2,12 +2,20 @@
 
 .faq {
   padding-top: vw(180);
+  h2 {
+    max-width: vw(641);
+    margin: 0 auto;
+  }
 }
 
 .container {
   margin-top: vw(56);
   display: flex;
   column-gap: vw(100);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .left {
@@ -19,6 +27,15 @@
     height: vw(405);
     object-fit: cover;
     margin-left: vw(60);
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    img {
+      margin-left: 0;
+      margin-bottom: vmin(3);
+    }
   }
 }
 

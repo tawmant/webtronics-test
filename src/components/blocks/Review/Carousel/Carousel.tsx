@@ -1,9 +1,9 @@
-import { FC, useCallback, useState } from 'react'
-import st from './Carousel.module.scss'
-import ArrowLeft from '/public/images/svg/arrow-left.svg'
-import ArrowRight from '/public/images/svg/arrow-right.svg'
+import { FC, useState } from 'react'
 import CarouselItem from './CarouselItem/CarouselItem'
 import { TCarouselItems, INewCarouselItem } from './types'
+import cl from 'classnames'
+import st from './Carousel.module.scss'
+import ArrowLeft from '/public/images/svg/arrow-left.svg'
 
 interface ICarouselProps {
   carouselItems: TCarouselItems
@@ -62,8 +62,11 @@ const Carousel: FC<ICarouselProps> = ({
           </div>
 
           <div className={st.btnWrapper}>
-            <button onClick={() => arrowsHandler('next')} className={st.btn}>
-              <ArrowRight />
+            <button
+              onClick={() => arrowsHandler('next')}
+              className={cl(st.btn, st.arrowRight)}
+            >
+              <ArrowLeft />
             </button>
           </div>
         </div>

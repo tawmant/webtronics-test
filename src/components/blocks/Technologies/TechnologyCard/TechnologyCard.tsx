@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import st from './TechnologyCard.module.scss'
 import { ITechnologiesItem } from '../types'
-import Image from "../../../UI/Image/Image";
+import Image from '../../../UI/Image/Image'
 
 interface IMentorCardProps {
   data: ITechnologiesItem
@@ -13,7 +13,7 @@ const TechnologyCard: FC<IMentorCardProps> = (props) => {
     <li className={st.technologyWrapper}>
       <div className={st.technology}>
         <div className={st.imageWrapper}>
-          <Image src={image} alt={title}  />
+          <Image src={image} alt={title} />
         </div>
         <h5 className={st.title}>{title}</h5>
       </div>

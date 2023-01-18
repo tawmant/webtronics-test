@@ -1,6 +1,5 @@
 import st from './Steps.module.scss'
 import cl from 'classnames'
-import StepIcon from '/public/images/svg/step-icon.svg'
 import { useRef } from 'react'
 import { TSteps } from './types'
 import Step from './Step/Step'

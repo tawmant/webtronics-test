@@ -1,13 +1,16 @@
 @import '/src/styles/index.scss';
 
 .technology-wrapper {
-  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
   object-fit: cover;
 
   border-radius: vw(16);
   padding: vw(1);
   clip-path: polygon(50% 0%, 100% 0, 100% 83%, 74% 99%, 0 100%, 0% 60%, 0 0);
-
 }
 
 .technology {

@@ -13,7 +13,7 @@ const AboutUs = () => {
       avatar: '/images/png/mentor-azamat.png',
     },
     {
-      name: 'Azamat Askarov',
+      name: 'Azamat Askarov 2',
       description: 'Front-end engineers work closely with designers',
       avatar: '/images/png/mentor-azamat.png',
       customStyles: {
@@ -21,13 +21,13 @@ const AboutUs = () => {
       },
     },
     {
-      name: 'Azamat Askarov',
+      name: 'Azamat Askarov 3',
       description: 'Front-end engineers work closely with designers',
       avatar: '/images/png/mentor-azamat.png',
     },
   ])
   return (
-    <section id='about-us' className={st.aboutUs}>
+    <section id="about-us" className={st.aboutUs}>
       <h2 className="title">About Us</h2>
       <div className={st.container}>
         <div className={cl(['col-6', st.left])}>
@@ -45,9 +45,10 @@ const AboutUs = () => {
         <div className={cl(['col-6', st.right])}>
           <img src="/images/png/front-text-bg.png" alt="bg" />
           <p className="text">
-            Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This
-            Career Path will teach you not only the necessary languages and technologies, but how to think like a
-            front-end engineer, too.
+            Front-end engineers work closely with designers to make websites
+            beautiful, functional, and fast. This Career Path will teach you not
+            only the necessary languages and technologies, but how to think like
+            a front-end engineer, too.
           </p>
         </div>
       </div>

@@ -20,15 +20,14 @@ const Accordion: FC<IAccordionProps> = ({ data }) => {
       className={cl(st.wrapper, { [st.active]: isOpen })}
     >
       <div className={cl(st.container, { [st.active]: isOpen })}>
-        <div className={st.row}>
-          <div>
-            <h4 className={st.titleAccordion}>{data.title}</h4>
-            <p className="text">{data.description}</p>
-          </div>
-          <div className={!isOpen ? st.icon : ''}>
+        <div className={st.header}>
+          <h4 className={st.titleAccordion}>{data.title}</h4>
+
+          <div className={!isOpen ? st.plus : st.minus}>
             {!isOpen ? <Plus /> : <Minus />}
           </div>
         </div>
+        <p className="text">{data.description}</p>
       </div>
     </div>
   )

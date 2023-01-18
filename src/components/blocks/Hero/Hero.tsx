@@ -9,8 +9,8 @@ const Hero = () => {
       <span className={st.bg} />
       <h2 className={st.titleFirst}>Front-End</h2>
       <p className={cl(st.description, 'text')}>
-        Make UIs and websites beautiful, functional, and fast. Cover all the topics that expensive bootcamps teach (and
-        more).
+        Make UIs and websites beautiful, functional, and fast. Cover all the
+        topics that expensive bootcamps teach (and more).
       </p>
       <div className={st.btnWrapper}>
         <Link href="#contact-us" scroll={false}>
