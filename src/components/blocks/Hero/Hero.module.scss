@@ -14,7 +14,7 @@
 
 .hero {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, auto);
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
   grid-template-areas:
     'title-first title-first title-first description'
     'btn-wrapper title-second title-second title-second'
@@ -31,33 +31,32 @@
       'subtitle'
       'description'
       'btn-wrapper';
+    justify-items: center;
   }
-  justify-content: center;
 }
 
 .title-first {
   @include font('Clash Display', vw(150), 600, 120%, $white);
   grid-area: title-first;
+  margin-right: vw(57);
 }
 .description {
   grid-area: description;
-  margin-left: vw(57);
+  //margin-left: vw(57);
   @media screen and (max-width: 768px) {
     margin-left: 0;
   }
 }
 .btn-wrapper {
   grid-area: btn-wrapper;
-  margin-right: vw(24);
   @media screen and (max-width: 768px) {
-    margin-right: 0;
     max-width: vw(300);
   }
-  justify-self: center;
 }
 .title-second {
   @include font('Clash Display', vw(150), 600, 120%, $white);
   grid-area: title-second;
+  margin-left: vw(24);
 }
 .subtitle {
   grid-area: subtitle;
